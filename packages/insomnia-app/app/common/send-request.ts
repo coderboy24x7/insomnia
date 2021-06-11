@@ -59,7 +59,7 @@ async function sendAndTransform(requestId, environmentId) {
       statusMessage: res.statusMessage,
       data: bodyBuffer ? bodyBuffer.toString('utf8') : undefined,
       headers: headersObj,
-      responseTime: toMs(res.elapsedTime),
+      responseTime: res.elapsedTime,
     };
   } finally {
     plugins.clearIgnores();
